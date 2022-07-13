@@ -16,6 +16,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const SafeArea(
+        top: true,
+        bottom: true,
+        left: false,
+        right: false,
         child: Text('Hola Mundo'),
       ),
     );
