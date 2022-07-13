@@ -16,13 +16,18 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          body: ListView(
-            children: List.generate(
-                100,
-                (i) => Text(
-                      '$i- Hola Mundo',
-                      style: const TextStyle(fontSize: 20),
-                    )),
+          body: SafeArea(
+            bottom: false,
+            left: true,
+            right: true,
+            child: ListView(
+              children: List.generate(
+                  100,
+                  (i) => Text(
+                        '$i- Hola Mundo',
+                        style: const TextStyle(fontSize: 20),
+                      )),
+            ),
           ),
         ));
   }
