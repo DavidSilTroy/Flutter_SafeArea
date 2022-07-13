@@ -10,18 +10,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter SafeArea',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const SafeArea(
-        top: true,
-        bottom: true,
-        left: false,
-        right: false,
-        child: Text('Hola Mundo'),
-      ),
-    );
+        title: 'Flutter SafeArea',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Scaffold(
+          body: ListView(
+            children: List.generate(
+                100,
+                (i) => Text(
+                      '$i- Hola Mundo',
+                      style: const TextStyle(fontSize: 20),
+                    )),
+          ),
+        ));
   }
 }
